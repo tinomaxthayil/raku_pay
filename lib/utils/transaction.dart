@@ -31,7 +31,6 @@ class User{
   //User(this.userName, this.password, this.name, this.balance);
   Map toMap(){
     Map userMap = new Map<String,dynamic>();
-    userMap['userName'] = this.userName;
     userMap['balance'] = this.balance;
     userMap['name'] = this.name;
     userMap['password'] = this.password;
@@ -40,11 +39,12 @@ class User{
 
   void setUser(){
     //User data = User('jithin');
-    var df = Firestore.instance.collection('Users').document().setData(this.toMap());
+    var df = Firestore.instance.collection('Users').document(this.userName).setData(this.toMap());
     print("added!");
   }
 
-  void getUser(){
-
+  bool verifyUser(String password){
+    
   }
+
 }
