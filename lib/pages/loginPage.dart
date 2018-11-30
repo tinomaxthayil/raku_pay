@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import './homePage.dart';
+import '../utils/transaction.dart';
+
 class LoginPage extends StatelessWidget {
+
+  User user = User('Thundu');
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -30,6 +34,7 @@ class LoginPage extends StatelessWidget {
             MaterialButton(
               child: new Text("Login", style: TextStyle(color: Colors.white, fontSize: 20.0,),),
               onPressed: () {
+                user.setUser();
 								print("Login Pressed");
 								Navigator.of(context).push(new MaterialPageRoute(builder: (BuildContext context) => new HomePage()));
 							},
