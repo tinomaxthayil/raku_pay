@@ -11,3 +11,27 @@ class TransTile extends StatelessWidget {
     );
   }
 }
+
+class GroupTile extends StatelessWidget {
+  final String gname;
+  final VoidCallback _onTap;
+  GroupTile(this.gname, this._onTap;
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: InkWell(
+        onTap: () => _onTap(),
+        child: Row(
+          children: <Widget>[
+            Image(
+							image: new AssetImage('assets/userPic.png'),
+							height: 150.0,
+							width: 150.0,
+						),
+            Text(gname),
+          ],
+        ),
+      ),
+    );
+  }
+}
