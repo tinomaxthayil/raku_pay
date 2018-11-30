@@ -15,7 +15,7 @@ class TransTile extends StatelessWidget {
 class GroupTile extends StatelessWidget {
   final String gname;
   final VoidCallback _onTap;
-  GroupTile(this.gname, this._onTap;
+  GroupTile(this.gname, this._onTap);
   @override
   Widget build(BuildContext context) {
     return Container(

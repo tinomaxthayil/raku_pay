@@ -17,8 +17,8 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
   List<Transaction> tlist = [new Transaction("abcd", "efgh", "", "", 1000.0),
     new Transaction("efgh", "ijkl", "", "", 200.0), new Transaction("efgh", "abcd", "", "", 500.0),];
 
-  List<Group> glist = [new Group("Kuriakose", ["Kuriakose", "Tino", "Jithin"], [100.0,20.0,500.0], [false,false,false]),
-    new Group("Kuriakose", ["Kuriakose", "Tino", "Jithin"], [100.0,20.0,500.0], [false,false,false]),];
+  List<Group> glist = [new Group("Kuriakose", "Go Trip", ["Kuriakose", "Tino", "Jithin"], [100.0,20.0,500.0], [false,false,false]),
+    new Group("Kuriakose", "OMR funds", ["Kuriakose","Tino", "Jithin"], [200.0,200.0,500.0], [false,false,false]),];
   
 
 
@@ -64,7 +64,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
             "AppName",
             style: new TextStyle(color: Colors.white),
           ),
-          backgroundColor: Colors.deepOrange,
+          backgroundColor: Colors.deepPurpleAccent,
           bottom: TabBar(
             indicatorColor: Colors.white,
             controller: controller,
